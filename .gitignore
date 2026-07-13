@@ -1,0 +1,8 @@
+# Private instance — your real data never gets published.
+/me/
+me/
+
+# OS noise
+.DS_Store
+*.log
+.env
