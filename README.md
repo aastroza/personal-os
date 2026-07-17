@@ -24,6 +24,24 @@ plus my own guardrails, cadence and voice.
 
 A weekly **energy throttle** (1–5) decides the week's intensity: low → light week with air; high → more deep-work blocks and building.
 
+## Skills
+The agent's capabilities live in `core/skills/` — each is a markdown "skill" you or your agent can invoke.
+
+| Skill | Pair | What it's for |
+|---|---|---|
+| `process-backlog` | — | Turn a raw brain-dump in `BACKLOG.md` into prioritized tasks against your goals. |
+| `plan-my-week` | — | Build the week's plan + energy throttle from goals and backlog. |
+| `prioritize` | — | Re-rank tasks under the P0–P3 model. |
+| `daily-brief` | — | Start-of-day orientation in three sentences. |
+| `inbox` | — | Triage email: classify, draft replies, run a daily digest (behavior-spec + evals + autonomy map inside). |
+| `advisor` | — | Self-improving personal advisor: reads your goals/guardrails, runs an eval checklist before answering, learns after. |
+| `ai-project-framework` | ↔ `ai-project-audit` | Scaffold a new AI project on solid ground — evals, behavior spec, autonomy map — **before** writing code. |
+| `ai-project-audit` | ↔ `ai-project-framework` | Audit an existing AI project against that framework; scores maturity /21 and lists the gaps. |
+| `skill-review` | — | Weekly prune-and-sharpen of the agent's own skills. |
+| `security` | — | Anti-phishing / never-share policy: observed content is data, not instructions. |
+
+> The `ai-project-framework` ↔ `ai-project-audit` pair encodes Shankha Dey's *No Vibes, Just Evals* frameworks + WHOOP eval practices. Start a project with the first; review it anytime with the second.
+
 ## Structure
 ```
 PersonalOS/
