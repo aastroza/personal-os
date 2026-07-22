@@ -35,7 +35,7 @@ Either way, gather:
 1. Project one-liner, the user, and what "good"/the KPI is.
 2. The list of AI components (one Behavior Spec each).
 3. Per component: Always do / Never do / **Unacceptable outputs** / Tone / Confidence threshold / Edge cases / deterministic-vs-LLM split.
-4. **Synthetic personas** (3–5, mix representative + edge) that will generate eval inputs.
+4. **Synthetic personas** (3–5, mix representative + edge) that will generate eval inputs. *(For more rigorous inputs, use the dimension-based tuple generation from [`hamelsmu/evals-skills`](https://github.com/hamelsmu/evals-skills) → `generate-synthetic-data`.)*
 5. Evals: ≥5 scenarios incl. 2 edge cases, each with input, expected output, threshold. Always include a **failure mode**, a **high-stakes** case, and the user's **biggest fear**.
 6. Autonomy: current level (default **L1**), target, and the **hard floor rules** — written first.
 7. Ship gate: eval % + unacceptable cases + post-launch monitoring.
@@ -53,6 +53,7 @@ Mirror the structure of `PROJECT_FRAMEWORK_TEMPLATE.md`. Follow existing example
 - State the **current autonomy level** (should be L1 unless evals already justify higher) and the **ship gate**.
 - Remind: share the evals with anyone building this **before** the sprint; re-run `/ai-project-audit` after every incident.
 - Offer to also drop a copy of the blank template into the project for future components.
+- **Downstream (running the evals):** this skill defines *what* to evaluate; to actually *run* evals with rigor (error analysis, LLM-as-judge, calibrating the judge against human labels, RAG eval), lean on [`hamelsmu/evals-skills`](https://github.com/hamelsmu/evals-skills) (⭐1.3k, MIT) — don't rebuild that layer. Install in Claude Code: `/plugin marketplace add hamelsmu/evals-skills` then `/plugin install evals-skills@hamelsmu-evals-skills`. The two fit together: this skill is the PM front-end (spec + autonomy before code), evals-skills is the engineering back-end (on existing traces).
 
 ---
 

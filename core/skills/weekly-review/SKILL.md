@@ -12,10 +12,13 @@ description: A frank weekly evaluation that scores how your week actually went a
 > Personalize by pointing the file references below at your own docs. A private, customized copy of this skill (with your real context) is what you install and consume; keep this generic template shareable.
 
 ## Inputs (read, don't dump)
-1. **Real calendar** — the calendar of the week ending: what actually got scheduled and (where visible) what moved or dropped. This is "what happened".
-2. **What was committed** — `WEEKLY_PLAN.md` (the approved plan + energy throttle). Source of truth is the markdown, not any seed note — once you approve, the plan lives in `WEEKLY_PLAN.md`.
+1. **What actually happened** — not just the calendar. Cross three sources so the retro reflects the live week, not the stale Friday-of-last-week snapshot:
+   - **Calendar** of the week ending: what got scheduled and (where visible) what moved or dropped.
+   - **`WEEKLY_PLAN.md` → "actual vs. planned" section** — the live trace your daily operator left during the week (items that came in, things that got bumped, reprioritizations). This captures decisions the calendar doesn't show. If it's empty, say so — that's a signal fine-grained tracking was lost.
+   - **Learnings added mid-week** — new entries in `LEARNINGS.md` logged while operating day to day, not only last Friday's distillation.
+2. **What was committed** — `WEEKLY_PLAN.md` (the approved plan + energy throttle): P0/P1, one-outcome and experiment as approved. Source of truth is the markdown, not any seed note. Comparing 1 (what happened) against 2 (what was committed) is the core of the verdict.
 3. **Objectives** — your goals doc (`GOALS.md`): did the week move the north star or just stay busy?
-4. **Learnings** — `LEARNINGS.md`: which past pattern repeated or broke this week?
+4. **Learnings** — `LEARNINGS.md`: which past pattern repeated or broke this week? (The top includes what was logged during the week, see input 1.)
 5. **Last week** — the prior entry: compare energy, one-outcome and load.
 
 ## Output — two parts
@@ -41,7 +44,7 @@ Write Part B in the shape of `WEEKLY_PLAN.md` so the planner (or you) can drop i
 - **Don't invent.** If the calendar or plan doesn't show something, say "no data", don't guess.
 - **Honest, not flattering.** Name what didn't work and why. No forced productivity.
 - **Read-only.** Never touch the calendar. Markdown only.
-- **Feeds the planner.** A weekly planner's Step 0 can read this skill's latest output instead of re-deriving the retro.
+- **Feeds the planner (gate).** Save the review as a dated file with a status line (e.g. `Status: PENDING VALIDATION`). A weekly planner's Step 0 should not build the plan until you validate the review (flip the status to `VALIDATED`). The concept: validate the retro first, then plan.
 
 ## How it runs
 - **On demand:** `/weekly-review`.
