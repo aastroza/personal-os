@@ -30,11 +30,12 @@ For an AI project, this skill creates the project structure. Use `ai-project-fra
 
 For repository-backed work:
 
-1. Record the repository, default branch, canonical setup or run instructions, validation, and CI or deploy references in `PROJECT.md`.
-2. Inspect the repository `README`, existing agent instructions, build manifests, and CI configuration before documenting commands.
+1. Record the repository, default branch, and links or named entry points for canonical setup, run, validation, CI, and deploy instructions in `PROJECT.md`. Keep executable commands in the repository README, manifests, or local `AGENTS.md`.
+2. Inspect the repository README, existing agent instructions, build manifests, and CI configuration before documenting entry points or commands.
 3. Keep code, issues, pull requests, CI logs, releases, and technical documentation in the repository. Link them from PersonalOS; do not copy them.
-4. When repository-local setup is part of the request and `<repository-root>/AGENTS.md` does not exist, create it from `core/templates/PROJECT_AGENTS.template.md`. Fill commands only from repository evidence and avoid conflicting with other root instruction files.
-5. If an `AGENTS.md` already exists, preserve it. Propose focused additions only when the user asks.
+4. When repository-local setup is part of the request and `<repository-root>/AGENTS.md` does not exist, inspect other root instruction files before creating it from `core/templates/PROJECT_AGENTS.template.md`. If another instruction file exists, preserve it and ask whether to create a compatible pointer or reconcile shared guidance; do not create a parallel instruction set silently.
+5. Include only sources and commands verified from repository evidence. Omit unknown rows or sections from `AGENTS.md` and report missing setup information to the user.
+6. If an `AGENTS.md` already exists, preserve it. Propose focused additions only when the user asks.
 
 ## 4. Respect action boundaries
 

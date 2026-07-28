@@ -6,17 +6,13 @@
 
 ## Sources of truth
 
-1. `README.md`
-2. {{Canonical technical docs, services, datasets, or issue tracker.}}
+{{List only verified existing sources, ordered by authority.}}
 
-More specific nested `AGENTS.md` files supplement these instructions for their subtrees.
+More specific nested `AGENTS.md` files apply to their subtrees and take precedence when instructions conflict.
 
 ## Commands
 
-- **Setup:** {{verified command or `→ fill when ready`}}
-- **Run:** {{verified command or `→ fill when ready`}}
-- **Test:** {{verified command or `→ fill when ready`}}
-- **Lint / format:** {{verified command or `→ fill when ready`}}
+{{Include only commands verified from repository evidence. Omit unknown commands and omit this section if none are verified.}}
 
 ## Git workflow
 

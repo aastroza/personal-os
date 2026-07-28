@@ -26,11 +26,11 @@ last_updated: YYYY-MM-DD
 ## Developer context (optional)
 - **Repository:** {{URL or local identifier}}
 - **Default branch:** {{branch}}
-- **Setup / run:** {{canonical docs or commands}}
-- **Validation:** {{tests, checks, or review path}}
+- **Setup / run:** {{link or named repository entry point}}
+- **Validation:** {{link or named repository entry point}}
 - **CI / deploy:** {{workflow and environment links}}
 
-> Code, issues, pull requests, CI logs, and releases stay in the repository. Link them; do not copy them into memory.
+> Code, issues, pull requests, CI logs, releases, technical documentation, and executable commands stay in the repository. Link them; do not copy them into PersonalOS or memory.
 
 ## TASKS
 > Lives in TASKS.md next to this file (P0–P3).
