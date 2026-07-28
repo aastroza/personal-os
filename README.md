@@ -34,7 +34,7 @@ The agent's capabilities live in `core/skills/` — each is a markdown "skill" y
 | `plan-my-week` | — | Build the week's plan + energy throttle from goals and backlog. |
 | `prioritize` | — | Re-rank tasks under the P0–P3 model. |
 | `daily-brief` | — | Start-of-day orientation in three sentences. |
-| `memory` | — | Capture, recall, correct, review, and archive the minimum durable context that improves future decisions. |
+| `memory` | — | Capture, recall, correct, and review the minimum durable context that improves future decisions. |
 | `inbox` | — | Triage email: classify, draft replies, run a daily digest (behavior-spec + evals + autonomy map inside). |
 | `advisor` | — | Self-improving personal advisor: reads your goals/guardrails, runs an eval checklist before answering, learns after. |
 | `ai-project-framework` | ↔ `ai-project-audit` | Scaffold a new AI project on solid ground — evals, behavior spec, autonomy map — **before** writing code. |
@@ -57,7 +57,7 @@ PersonalOS/
 
 ## Quick start
 1. Create a private `me/` folder.
-2. Copy the root templates you need (`BACKLOG`, `GOALS`, `GUARDRAILS`, `POV_VOICE`, `PROJECT_HQ`, `STATUS`, `WEEKLY_PLAN`) from `core/templates/` into `me/`, removing `.template` from their filenames. Use `project.template.md` inside each project. Skip the memory templates; they use the destinations below.
+2. Copy the root templates you need (`BACKLOG`, `GOALS`, `GUARDRAILS`, `POV_VOICE`, `PROJECT_HQ`, `STATUS`, `WEEKLY_PLAN`) from `core/templates/` into `me/`, removing `.template` from their filenames. For each project, copy `core/templates/project.template.md` to `me/projects/<stream>/PROJECT.md`. Skip the memory templates; they use the destinations below.
 3. Fill in `me/GOALS.md` (your goals) and `me/GUARDRAILS.md` (your non-negotiables).
 4. Open the folder with your AI agent and say: *"Read CLAUDE.md and help me get oriented."*
 5. Enable memory later only if you want it.
@@ -75,7 +75,7 @@ Memory is a small durable-context layer inspired by [jxnl/personal-monorepo-temp
 
 Memory is enabled only when `me/memory/README.md` exists. Without that file, agents skip memory reads, proposals, and writes.
 
-Invoke `memory` to remember something, recall why a decision was made, correct stale context, close out meaningful work, or review what should be consolidated or archived. Behavior examples live in `core/skills/memory/EVALS.md`.
+Invoke `memory` to remember something, recall why a decision was made, correct stale context, close out meaningful work, or review what should be consolidated or removed. Behavior examples live in `core/skills/memory/EVALS.md`.
 
 For developer projects, the code repository remains authoritative for source, issues, pull requests, CI, and releases. Memory keeps the operating context around that work—entry points, rationale, experiment conclusions, outcomes, and links to delivery evidence—without copying diffs or logs.
 

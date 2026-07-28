@@ -117,13 +117,9 @@ Review memory without rewriting it automatically. Surface:
 - decisions contradicted by newer decisions;
 - results with no verification;
 - duplicate, overly detailed, or sensitive material;
-- memories that should be archived.
+- memories that no longer improve future decisions.
 
-Propose a short set of changes. Ask before merging, archiving, or deleting.
-
-### Archive
-
-Archive only when the memory no longer guides active work but remains useful history. Preserve links from active project files when the historical rationale still matters. Never delete material solely because it is old.
+Propose a short set of changes. Ask before merging or deleting.
 
 ## Dates
 

@@ -31,6 +31,6 @@ Periodically ask:
 - Which experiments lack a conclusion?
 - Which decisions have been superseded?
 - Which results lack verification?
-- What should be consolidated or archived?
+- What should be consolidated or removed?
 
-Propose changes before merging, archiving, or deleting memory.
+Propose changes before merging or deleting memory.
