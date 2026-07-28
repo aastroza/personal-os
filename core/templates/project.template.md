@@ -21,7 +21,7 @@ last_updated: YYYY-MM-DD
 ## Source of truth
 - **Primary docs:** {{links or paths}}
 - **Data / systems:** {{links or names}}
-- **Related memory:** {{people, experiments, decisions, or results}}
+- **Related memory (optional; only when enabled):** {{explicit links to people, experiments, decisions, or results}}
 
 ## Developer context (optional)
 - **Repository:** {{URL or local identifier}}
@@ -31,9 +31,6 @@ last_updated: YYYY-MM-DD
 - **CI / deploy:** {{workflow and environment links}}
 
 > Code, issues, pull requests, CI logs, and releases stay in the repository. Link them; do not copy them into memory.
-
-## Durable context
-{{Minimum context a future session needs to make a good decision.}}
 
 ## TASKS
 > Lives in TASKS.md next to this file (P0–P3).

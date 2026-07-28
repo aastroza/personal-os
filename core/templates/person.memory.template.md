@@ -16,9 +16,9 @@ review_after:
 - **Preferences:** {{stable, explicitly observed or user-confirmed preferences}}
 - **Responsibilities:** {{current responsibilities relevant to collaboration}}
 
-## Open loops
+## Related actions
 
-{{Commitments or unresolved topics. Actions themselves belong in BACKLOG, TASKS, or WEEKLY_PLAN.}}
+{{Links to the canonical items in BACKLOG, project TASKS, or WEEKLY_PLAN. Do not copy commitments here.}}
 
 ## Notes
 

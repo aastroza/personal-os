@@ -30,8 +30,6 @@ semana** (`me/WEEKLY_PLAN.md`), aplicando lo aprendido (`me/WEEKLY_LEARNINGS.md`
 2. Para cada item: clarificar a una acción concreta (verbo + outcome). Tirar duplicados y ruido.
 3. Asignar **stream** (`ai-native-build`, `job-search`, `investing`, o item de vida → Weekly Planning)
    y **prioridad** (P0–P3), evaluando contra GOALS **y** contra el contrato de la semana + learnings.
-   Después de identificar el stream, leer su overview y solo las decisiones/resultados relevantes de
-   `me/memory/` cuando puedan cambiar la clasificación. No cargar todo el árbol de memoria.
 4. **Reconciliar contra el plan vivo, no dumpear en paralelo (cable de salida):**
    - Si el item se gana un slot de ESTA semana → entra al P0/P1 de `me/WEEKLY_PLAN.md`. Como los caps
      ya vienen medio llenos, si no hay slot libre, **algo se baja** — decilo explícito y por qué
@@ -55,6 +53,3 @@ semana** (`me/WEEKLY_PLAN.md`), aplicando lo aprendido (`me/WEEKLY_LEARNINGS.md`
 - Respetá el **throttle**: energía baja no se compensa metiendo más backlog.
 - Los caps se cuentan sobre el **total de la semana**, incluyendo lo que ya puso el planner — no
   arranques de cero.
-- Una tarea procesada nunca se convierte en memoria por el solo hecho de ser importante. Si el
-  procesamiento revela una decisión, corrección o contexto durable, aplicar `core/skills/memory/SKILL.md`
-  y pedir aprobación salvo que el usuario haya dicho explícitamente que lo recuerdes.

@@ -7,9 +7,8 @@
 ## Steps
 1. Ask **"work, personal, or both today?"** and filter to that context.
 2. Read `me/PROJECT_HQ.md` and `me/WEEKLY_PLAN.md`.
-3. Read a project overview or related decision/result only when `PROJECT_HQ.md` points to it or it can change today's recommendation. Never summarize the whole memory tree.
-4. Say, in 3 sentences: (a) where things stand, (b) what's on the week, (c) the ONE thing to do today.
-5. Propose **1–3 P0 tasks** (max 3). Respect the energy throttle.
-6. If BACKLOG has unprocessed items, offer to run `process-backlog`.
+3. Say, in 3 sentences: (a) where things stand, (b) what's on the week, (c) the ONE thing to do today.
+4. Propose **1–3 P0 tasks** (max 3). Respect the energy throttle.
+5. If BACKLOG has unprocessed items, offer to run `process-backlog`.
 
-**Rules:** brevity is the point. No walls of text. Lead with the decision/action. Memory provides context; it does not earn space in the brief unless it changes the decision.
+**Rules:** brevity is the point. No walls of text. Lead with the decision/action.

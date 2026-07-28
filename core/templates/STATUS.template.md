@@ -6,4 +6,3 @@
 - **What moved:** {{…}}
 - **Open / next up:** {{…}}
 - **Waiting on:** {{…}}
-- **Durable memory:** {{captured with approval / proposed / none}}

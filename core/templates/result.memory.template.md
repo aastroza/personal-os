@@ -28,9 +28,13 @@ last_updated: YYYY-MM-DD
 
 {{What should influence a future decision or approach?}}
 
-## Remaining work
+## Known gaps
 
-{{Follow-ups or known gaps. Actions themselves belong in BACKLOG, TASKS, or WEEKLY_PLAN.}}
+{{Non-actionable limits or uncertainty that qualify this result.}}
+
+## Related actions
+
+{{Links to the canonical items in BACKLOG, project TASKS, or WEEKLY_PLAN. Do not copy follow-ups here.}}
 
 ## Related
 

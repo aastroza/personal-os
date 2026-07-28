@@ -2,9 +2,11 @@
 
 > Durable context, not a transcript archive or second task manager.
 
+The presence of this file at `me/memory/README.md` enables memory.
+
 ## What belongs here
 
-- `people/` — collaboration context, preferences, responsibilities, and open loops.
+- `people/` — collaboration context, preferences, durable responsibilities, and links to canonical tasks.
 - `experiments/` — bounded trials and what they taught you.
 - `decisions/` — choices whose rationale will matter later.
 - `results/` — completed outcomes, verification, and learning.

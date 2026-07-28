@@ -7,6 +7,16 @@ description: Keep a small, durable memory of project context, people, experiment
 
 **Goal:** preserve the minimum context that will improve a future decision without turning PersonalOS into an archive of everything that happened.
 
+## Enablement gate
+
+Memory is enabled only when `me/memory/README.md` exists.
+
+If the file does not exist:
+
+- do not read, search, propose, or write memory;
+- do not add memory fields to briefs, plans, reviews, or handoffs;
+- explain how to enable memory only when the user explicitly invokes this skill or asks to set it up.
+
 Memory complements the operating loop:
 
 - `GOALS.md` says what matters.
@@ -23,7 +33,7 @@ Memory complements the operating loop:
 - Closeout: a project milestone, experiment, or meaningful body of work finishes.
 - Review: "review memory", "what is stale?", "prune or consolidate memory".
 
-Do not create memory merely because information appeared in conversation. If the user did not explicitly ask to remember it, propose the smallest useful memory change and ask before writing.
+Do not create memory merely because information appeared in conversation. A new memory requires "remember this" or explicit approval. A direct correction authorizes updating an affected existing entry, but not creating a new one.
 
 ## Durable-memory test
 
@@ -48,10 +58,10 @@ Do not capture:
 | Memory | Canonical location | What belongs there |
 |---|---|---|
 | Project state | `me/projects/<stream>/PROJECT.md` or the stream's existing overview | Why it matters, current state, durable context, sources of truth, next milestone |
-| Person | `me/memory/people/<slug>.md` | Role, working preferences, responsibilities, open loops, last verification |
+| Person | `me/memory/people/<slug>.md` | Role, working preferences, durable responsibilities, related task links, last verification |
 | Experiment | `me/memory/experiments/YYYY-MM-DD-<slug>.md` | Question, hypothesis, boundary, evidence, conclusion, disposition |
 | Decision | `me/memory/decisions/YYYY-MM-DD-<slug>.md` | Context, choice, rationale, consequences, review condition |
-| Result | `me/memory/results/YYYY-MM-DD-<slug>.md` | Outcome, verification, learning, remaining work |
+| Result | `me/memory/results/YYYY-MM-DD-<slug>.md` | Outcome, verification, learning, known gaps, related task links |
 
 If a canonical file already exists, update it instead of creating an adjacent note. Link related memories rather than copying their content.
 
@@ -77,7 +87,7 @@ Do not copy diffs, source files, full CI logs, review threads, or generated buil
 3. Search existing memory for the same project, person, experiment, decision, or result.
 4. Separate observed facts, user statements, and inference. Do not save an inference as fact.
 5. Draft the smallest useful addition.
-6. If the user did not explicitly request memory in the current message, show the proposed change and ask for approval.
+6. If the user did not explicitly request new memory in the current message, show the proposed change and ask for approval.
 7. Write or update the canonical file and report what changed.
 
 ### Recall
@@ -90,11 +100,12 @@ Do not copy diffs, source files, full CI logs, review threads, or generated buil
 
 ### Correct
 
-1. Treat a direct user correction as authoritative unless it conflicts with a safety boundary.
+1. Treat a direct user correction as authorization to update affected existing memory unless it conflicts with a safety boundary.
 2. Find every canonical entry affected by the correction.
-3. Update the existing entry; do not preserve a false fact as if it were still current.
-4. Keep prior context only when the history itself explains an important decision.
-5. Refresh `last_updated`; refresh `last_verified` only for facts actually confirmed.
+3. If no existing entry contains the corrected context, propose new memory and ask before creating it.
+4. Update existing entries without preserving a false fact as if it were still current.
+5. Keep prior context only when the history itself explains an important decision.
+6. Refresh `last_updated`; refresh `last_verified` only for facts actually confirmed.
 
 ### Review
 
