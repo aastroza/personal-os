@@ -12,7 +12,8 @@ plus my own guardrails, cadence and voice.
 1. **Brain-dump** anything into `BACKLOG.md` — no structure needed.
 2. **Process** — tell your agent "process my backlog." It turns notes into tasks, prioritized against `GOALS.md`.
 3. **Orient** — start a session and the agent asks *"work, personal, or both today?"*, then orients you in 3 sentences: where things stand, this week's plan, the one thing to do today.
-4. **Improve** — a weekly `skill-review` prunes and sharpens the agent's own skills so the system gets better over time.
+4. **Remember** — decisions, results, experiments, corrections, and useful collaboration context can become durable memory; tasks and transcripts do not.
+5. **Improve** — a weekly `skill-review` prunes and sharpens the agent's own skills so the system gets better over time.
 
 ## Priority model
 | Priority | Meaning | Limit |
@@ -33,6 +34,7 @@ The agent's capabilities live in `core/skills/` — each is a markdown "skill" y
 | `plan-my-week` | — | Build the week's plan + energy throttle from goals and backlog. |
 | `prioritize` | — | Re-rank tasks under the P0–P3 model. |
 | `daily-brief` | — | Start-of-day orientation in three sentences. |
+| `memory` | — | Capture, recall, correct, review, and archive the minimum durable context that improves future decisions. |
 | `inbox` | — | Triage email: classify, draft replies, run a daily digest (behavior-spec + evals + autonomy map inside). |
 | `advisor` | — | Self-improving personal advisor: reads your goals/guardrails, runs an eval checklist before answering, learns after. |
 | `ai-project-framework` | ↔ `ai-project-audit` | Scaffold a new AI project on solid ground — evals, behavior spec, autonomy map — **before** writing code. |
@@ -48,18 +50,48 @@ PersonalOS/
 ├── CLAUDE.md          # session ritual — the agent reads this first
 ├── AGENTS.md          # operating manual (tool-agnostic: Claude Code, Cowork, Codex)
 ├── core/              # the generic, reusable framework (public)
-│   ├── templates/     # starter files you copy into your own instance
-│   └── skills/        # process-backlog, plan-my-week, daily-brief, prioritize, skill-review, inbox, security
+│   ├── templates/     # starter files, including the optional memory layer
+│   └── skills/        # backlog, planning, brief, memory, reviews, inbox, security
 └── me/                # YOUR private instance — goals, projects, backlog (gitignored)
 ```
 
 ## Quick start
 1. Copy the files in `core/templates/` into a private `me/` folder.
 2. Fill in `me/GOALS.md` (your goals) and `me/GUARDRAILS.md` (your non-negotiables).
-3. Open the folder with your AI agent and say: *"Read CLAUDE.md and help me get oriented."*
+3. Optional: create `me/memory/{people,experiments,decisions,results}/` from the memory templates. Memory can also be added later; existing installations continue to work without it.
+4. Open the folder with your AI agent and say: *"Read CLAUDE.md and help me get oriented."*
+
+## Memory
+
+Memory is a small durable-context layer inspired by [jxnl/personal-monorepo-template](https://github.com/jxnl/personal-monorepo-template). It is deliberately not a second task manager or a transcript archive:
+
+- project state stays in each project's overview;
+- tasks stay in `BACKLOG.md`, project `TASKS.md`, or `WEEKLY_PLAN.md`;
+- people, experiments, decisions, and results live under `me/memory/`;
+- existing canonical files are updated before new notes are created;
+- incidental context requires approval before it is written;
+- secrets, raw private conversations, and sensitive personal dossiers are excluded.
+
+Invoke `memory` to remember something, recall why a decision was made, correct stale context, close out meaningful work, or review what should be consolidated or archived. Behavior examples live in `core/skills/memory/EVALS.md`.
+
+For developer projects, the code repository remains authoritative for source, issues, pull requests, CI, and releases. Memory keeps the operating context around that work—entry points, rationale, experiment conclusions, outcomes, and links to delivery evidence—without copying diffs or logs.
+
+Template mapping:
+
+| Public template | Private destination |
+|---|---|
+| `MEMORY.template.md` | `me/memory/README.md` |
+| `person.memory.template.md` | `me/memory/people/<slug>.md` |
+| `experiment.memory.template.md` | `me/memory/experiments/YYYY-MM-DD-<slug>.md` |
+| `decision.memory.template.md` | `me/memory/decisions/YYYY-MM-DD-<slug>.md` |
+| `result.memory.template.md` | `me/memory/results/YYYY-MM-DD-<slug>.md` |
 
 ## Privacy
-`me/` is gitignored — your real goals, pipeline and personal data stay local. Only the generic framework is public.
+`me/` is gitignored — your real goals, pipeline, memory, and personal data stay local. Only the generic framework and empty templates are public. A private repository is still not a secret manager: keep credentials and authentication material out of memory.
+
+## Cross-platform text
+
+The repository normalizes Markdown and CSV files to UTF-8-compatible LF text through `.gitattributes` and provides matching editor defaults in `.editorconfig`, so the public framework can be edited from Windows and macOS without line-ending churn.
 
 ## License
 MIT — use it, fork it, make it yours.

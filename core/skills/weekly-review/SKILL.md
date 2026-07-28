@@ -20,15 +20,17 @@ description: A frank weekly evaluation that scores how your week actually went a
 3. **Objectives** — your goals doc (`GOALS.md`): did the week move the north star or just stay busy?
 4. **Learnings** — `LEARNINGS.md`: which past pattern repeated or broke this week? (The top includes what was logged during the week, see input 1.)
 5. **Last week** — the prior entry: compare energy, one-outcome and load.
+6. **Relevant durable context** — only decisions, experiment conclusions, or results from `me/memory/` that changed this week's commitments or interpretation. Do not scan or summarize the full memory tree.
 
 ## Output — two parts
 
 ### Part A — The verdict (dashboard)
-Short and frank. No empty optimism. Four cuts:
+Short and frank. No empty optimism. Five cuts:
 - **Real vs. committed** — of the P0/P1 committed, what got done, what slipped, and *why* (energy, interruptions, over-scoping).
 - **Vs. objectives** — did the week advance the goals, or was it maintenance?
 - **Vs. learnings** — which pattern from `LEARNINGS.md` showed up again (or was finally broken).
 - **Vs. last week** — energy, load and one-outcome vs. last week (better / same / worse, one line each).
+- **Memory candidate** — at most one durable result, decision, experiment conclusion, or correction worth preserving. Propose it; do not write it without explicit approval.
 Lead with the single most important signal. Flag 🚩 what's at risk if it continues.
 
 ### Part B — Seed for next week (speeds up planning)
@@ -45,6 +47,7 @@ Write Part B in the shape of `WEEKLY_PLAN.md` so the planner (or you) can drop i
 - **Honest, not flattering.** Name what didn't work and why. No forced productivity.
 - **Read-only.** Never touch the calendar. Markdown only.
 - **Feeds the planner (gate).** Save the review as a dated file with a status line (e.g. `Status: PENDING VALIDATION`). A weekly planner's Step 0 should not build the plan until you validate the review (flip the status to `VALIDATED`). The concept: validate the retro first, then plan.
+- **Memory stays selective.** Carryover tasks remain in the plan. Only reusable conclusions follow `core/skills/memory/SKILL.md`.
 
 ## How it runs
 - **On demand:** `/weekly-review`.
