@@ -34,6 +34,8 @@ Each stream is a folder under `me/projects/`, tagged `work` / `personal` / `both
 
 The project overview is the canonical home for durable project state. When memory is enabled, link related people, experiments, decisions, and results from that overview instead of copying tasks or searching the whole memory tree.
 
+Use `core/skills/new-project/SKILL.md` when creating a stream. For repository-backed work, keep technical state in the repository and use its local `AGENTS.md` for repository boundaries, verified commands, conventions, and safety gates.
+
 ## Content layer (ON)
 Nico builds in public. When drafting posts, READMEs, or thought-leadership, use `me/POV_VOICE.md` (his point of view + voice). Turn work into artifacts: PRD, post, skill, prototype.
 

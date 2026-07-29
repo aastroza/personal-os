@@ -36,6 +36,7 @@ The agent's capabilities live in `core/skills/` — each is a markdown "skill" y
 | `daily-brief` | — | Start-of-day orientation in three sentences. |
 | `memory` | — | Capture, recall, correct, and review the minimum durable context that improves future decisions. |
 | `weekly-memory-review` | — | Distill completed Codex threads into proposal-only project and memory updates. |
+| `new-project` | — | Create a project packet and connect it to an optional code repository without duplicating technical state. |
 | `inbox` | — | Triage email: classify, draft replies, run a daily digest (behavior-spec + evals + autonomy map inside). |
 | `advisor` | — | Self-improving personal advisor: reads your goals/guardrails, runs an eval checklist before answering, learns after. |
 | `ai-project-framework` | ↔ `ai-project-audit` | Scaffold a new AI project on solid ground — evals, behavior spec, autonomy map — **before** writing code. |
@@ -62,6 +63,8 @@ PersonalOS/
 3. Fill in `me/GOALS.md` (your goals) and `me/GUARDRAILS.md` (your non-negotiables).
 4. Open the folder with your AI agent and say: *"Read CLAUDE.md and help me get oriented."*
 5. Enable memory later only if you want it.
+
+Invoke `new-project` when starting a stream. It creates the private project packet and, when repository setup is in scope, can add a repository-local `AGENTS.md` from `core/templates/PROJECT_AGENTS.template.md`. It does not initialize Git, publish changes, or create pull requests unless you explicitly ask.
 
 ## Memory
 
