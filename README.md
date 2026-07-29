@@ -35,6 +35,7 @@ The agent's capabilities live in `core/skills/` — each is a markdown "skill" y
 | `prioritize` | — | Re-rank tasks under the P0–P3 model. |
 | `daily-brief` | — | Start-of-day orientation in three sentences. |
 | `memory` | — | Capture, recall, correct, and review the minimum durable context that improves future decisions. |
+| `weekly-memory-review` | — | Distill completed Codex threads into proposal-only project and memory updates. |
 | `new-project` | — | Create a project packet and connect it to an optional code repository without duplicating technical state. |
 | `inbox` | — | Triage email: classify, draft replies, run a daily digest (behavior-spec + evals + autonomy map inside). |
 | `advisor` | — | Self-improving personal advisor: reads your goals/guardrails, runs an eval checklist before answering, learns after. |
@@ -79,6 +80,8 @@ Memory is a small durable-context layer inspired by [jxnl/personal-monorepo-temp
 Memory is enabled only when `me/memory/README.md` exists. Without that file, agents skip memory reads, proposals, and writes.
 
 Invoke `memory` to remember something, recall why a decision was made, correct stale context, close out meaningful work, or review what should be consolidated or removed. Behavior examples live in `core/skills/memory/EVALS.md`.
+
+Invoke `weekly-memory-review` to review recent completed Codex threads. It proposes selective project and memory changes, but writes nothing until you approve individual items.
 
 For developer projects, the code repository remains authoritative for source, issues, pull requests, CI, and releases. Memory keeps the operating context around that work—entry points, rationale, experiment conclusions, outcomes, and links to delivery evidence—without copying diffs or logs.
 
